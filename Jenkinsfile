@@ -8,7 +8,7 @@ pipeline {
                 sh('whoami')
                 sh('printenv')
                 sh('javac -version')
-                sh('yum update')
+                sh('sudo yum update')
                 sh('./gradlew build')
             }
         }

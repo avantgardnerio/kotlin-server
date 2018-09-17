@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh('cat /etc/*release*')
                 sh('pwd')
                 sh('printenv')
                 sh('javac -version')

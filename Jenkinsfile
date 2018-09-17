@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh('cat /etc/*release*')
-                sh('whoami')
+                sh('echo user=$USER')
                 sh('pwd')
                 sh('printenv')
                 sh('javac -version')

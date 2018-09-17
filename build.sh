@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build -t kotlin-server .
+docker build -t bgard6977/kotlin-server .

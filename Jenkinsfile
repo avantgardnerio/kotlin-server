@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh('whoami')
                 sh('printenv')
                 sh('javac -version')
                 sh('yum update')

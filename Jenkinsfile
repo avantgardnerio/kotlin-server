@@ -6,9 +6,11 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh('cat /etc/*release*')
+                sh('whoami')
                 sh('pwd')
                 sh('printenv')
                 sh('javac -version')
+                sh('yum update')
                 sh('./gradlew build')
             }
         }

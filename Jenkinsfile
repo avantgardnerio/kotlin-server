@@ -5,6 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh('pwd')
+                sh('printenv')
                 sh('javac -version')
                 sh('./gradlew build')
             }

@@ -1,11 +1,6 @@
-Following this tutorial:
+An example app to deploy to OpenShift CI:
 
-https://dzone.com/articles/deploying-docker-images-to-openshift
+1. `oc new-app --strategy=source bgard6977/docker-test~https://github.com/bgard6977/kotlin-server`
+1. `oc patch bc/kotlin-server -p '{"spec":{"resources":{"limits":{"memory":"1Gi"}}}}'`
 
-1. `./gradlew build`
-1. `./build.sh`
-1. `./push.sh`
-1. `./new-app.sh`
-1. `./expose.sh`
-1. hit server in prod
-1. `./delete.sh`
+Observe build and deploy of Kotlin server.
